@@ -47,3 +47,15 @@ for file in `ls inhere`; do cat inhere/$file; echo ; done
 
 find inhere/ ! -executable -size 1033c -exec cat  {} \;
 # DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+# 6 -> 7
+# bandit6
+
+# The password for the next level is stored somewhere on the server and has all of the following properties:
+
+# owned by user bandit7
+# owned by group bandit6
+# 33 bytes in size
+
+find / -size 33c -user bandit7 -group bandit6 -exec ls -l  {} \;
+# HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
