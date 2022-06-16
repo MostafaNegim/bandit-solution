@@ -66,3 +66,11 @@ find / -size 33c -user bandit7 -group bandit6 -exec ls -l  {} \;
 
 egrep millionth data.txt 
 # cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+# 8 -> 9
+# bandit8
+# The password for the next level is stored in the file data.txt
+# and is the only line of text that occurs only once
+
+sort data.txt | uniq -u
+# UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
