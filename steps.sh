@@ -36,3 +36,14 @@ cat inhere/.hidden
 
 for file in `ls inhere`; do cat inhere/$file; echo ; done
 # koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+# 5 -> 6
+# bandit5
+# The password for the next level is stored in a file somewhere
+# under the inhere directory and has all of the following properties:
+#       human-readable
+#       1033 bytes in size
+#       not executable
+
+find inhere/ ! -executable -size 1033c -exec cat  {} \;
+# DXjZPULLxYr17uwoI01bNLQbtFemEgo7
