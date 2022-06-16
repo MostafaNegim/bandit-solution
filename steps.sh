@@ -59,3 +59,10 @@ find inhere/ ! -executable -size 1033c -exec cat  {} \;
 
 find / -size 33c -user bandit7 -group bandit6 -exec ls -l  {} \;
 # HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+# 7 -> 8
+# bandit7
+# The password for the next level is stored in the file data.txt next to the word millionth
+
+egrep millionth data.txt 
+# cvX2JJa4CFALtqS87jk27qwqGhBM9plV
