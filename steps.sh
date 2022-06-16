@@ -82,3 +82,10 @@ sort data.txt | uniq -u
 
 strings data.txt | grep '===='
 # truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+# 10 -> 11
+# bandit10
+# The password for the next level is stored in the file data.txt, which contains base64 encoded data
+
+cat data.txt | base64 --decode
+# IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
