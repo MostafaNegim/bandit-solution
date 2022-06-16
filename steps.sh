@@ -199,3 +199,13 @@ echo "cluFn7wTiGryunymYOu4RcffSxQluehd" | openssl s_client -quiet -connect local
 
 diff passwords.new passwords.old
 # kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+
+# 18 -> 19
+# bandit18
+
+# The password for the next level is stored in a file readme in the homedirectory. 
+# Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.
+ssh bandit.labs.overthewire.org -p 2220 -lbandit18 "bash"
+# or 
+ssh bandit.labs.overthewire.org -p 2220 -lbandit18 "cat readme"
+# IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
