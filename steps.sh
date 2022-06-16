@@ -97,3 +97,47 @@ cat data.txt | base64 --decode
 
 cat data.txt | tr [a-zA-Z] [n-za-mN-ZA-M]
 # 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+# 12 -> 13
+# bandit12
+# The password for the next level is stored in the file data.txt,
+#  which is a hexdump of a file that has been repeatedly compressed. 
+#  For this level it may be useful to create a directory under /tmp in which you can work using mkdir. 
+#  For example: mkdir /tmp/myname123.
+#  Then copy the datafile using cp, and rename it using mv (read the manpages!)
+
+mkdir /tmp/outputs
+cd /tmp/outputs
+cp ~/data.txt /tmp/outputs
+xxd -r data.txt out1 
+file out1 
+# out1: gzip compressed data, was "data2.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+mv out1 out1.gz
+gunzip -d out1.gz 
+file out1
+# out1: bzip2 compressed data, block size = 900k
+bzip2 -d out1
+# bzip2: Can't guess original name for out1 -- using out1.out
+ile out1.out 
+# out1.out: gzip compressed data, was "data4.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+mv out1.out out2.gz
+gunzip -d out2.gz
+file out2
+#out2: POSIX tar archive (GNU)
+tar -xvf out2
+file data5.bin
+# data5.bin: POSIX tar archive (GNU)
+tar -xvf data5.bin
+file data6.bin
+# data6.bin: bzip2 compressed data, block size = 900k
+bzip2 -d data6.bin
+file data6.bin.out 
+# data6.bin.out: POSIX tar archive (GNU)
+tar -xvf data6.bin.out
+file data8.bin 
+# data8.bin: gzip compressed data, was "data9.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+mv data8.bin data8.bin.gz
+gunzip -d data8.bin
+file data8.bin 
+# data8.bin: ASCII text
+# 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
