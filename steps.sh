@@ -1,10 +1,14 @@
 #!/bin/bash
 
-# 1
+# 0
 ssh -l bandit0 bandit.labs.overthewire.org -p 2220
 
-# 2
+# 0 -> 1
+# bandit0
 cat readme
 # boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 
-# 3
+# 1 -> 2
+# bandit1
+cat ./-
+# CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
