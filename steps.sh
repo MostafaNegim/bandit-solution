@@ -152,3 +152,12 @@ file data8.bin
 ssh localhost -lbandit14 -i sshkey.private
 cat /etc/bandit_pass/bandit14
 # 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+
+# 14 -> 15
+# bandit14
+# The password for the next level can be retrieved by submitting 
+# the password of the current level to port 30000 on localhost.
+
+nc localhost 30000
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+# BfMYroe26WYalil77FoDi9qh59eK5xNr
