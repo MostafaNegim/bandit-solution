@@ -89,3 +89,11 @@ strings data.txt | grep '===='
 
 cat data.txt | base64 --decode
 # IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+# 11 -> 12
+# bandit11
+# The password for the next level is stored in the file data.txt, 
+# where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+
+cat data.txt | tr [a-zA-Z] [n-za-mN-ZA-M]
+# 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
