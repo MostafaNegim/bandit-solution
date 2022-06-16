@@ -10,5 +10,14 @@ cat readme
 
 # 1 -> 2
 # bandit1
+# The password for the next level is stored in a file called - located in the home directory
+
 cat ./-
 # CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+# 2 -> 3
+# bandit2
+# The password for the next level is stored in a file called 
+# spaces in this filename located in the home directory
+cat spaces\ in\ this\ filename
+# UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
