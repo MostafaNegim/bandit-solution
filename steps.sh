@@ -172,3 +172,17 @@ nc localhost 30000
 #  Next to ‘R’ and ‘Q’, the ‘B’ command also works in this version of that command…
 openssl s_client -connect  localhost:30001
 # cluFn7wTiGryunymYOu4RcffSxQluehd
+
+# 16 -> 17
+# bandit16
+
+# The credentials for the next level can be retrieved by submitting the password of 
+# the current level to a port on localhost in the range 31000 to 32000. 
+# First find out which of these ports have a server listening on them. 
+# Then find out which of those speak SSL and which don’t. There is only 1 server that
+# will give the next credentials, 
+# the others will simply send back to you whatever you send to it.
+
+nmap -sV -p 31000-32000 localhost
+echo "cluFn7wTiGryunymYOu4RcffSxQluehd" | openssl s_client -quiet -connect localhost:31790
+# cluFn7wTiGryunymYOu4RcffSxQluehd
