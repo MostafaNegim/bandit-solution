@@ -28,3 +28,11 @@ cat spaces\ in\ this\ filename
 
 cat inhere/.hidden
 # pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+# 4 -> 5
+# bandit4
+# The password for the next level is stored in the only human-readable file in the inhere directory. 
+# Tip: if your terminal is messed up, try the “reset” command.
+
+for file in `ls inhere`; do cat inhere/$file; echo ; done
+# koReBOKuIDDepwhWk7jZC0RTdopnAYKh
