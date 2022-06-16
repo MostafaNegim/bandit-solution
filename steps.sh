@@ -21,3 +21,10 @@ cat ./-
 # spaces in this filename located in the home directory
 cat spaces\ in\ this\ filename
 # UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+# 3 -> 4
+# bandit3
+# The password for the next level is stored in a hidden file in the inhere directory.
+
+cat inhere/.hidden
+# pIwrPrtPN36QITSp3EQaw936yaFoFgAB
